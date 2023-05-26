@@ -21,6 +21,27 @@
             margin-top: 50px;
         }
 
+        .image-container {
+          text-align: center; /* Adjust alignment as needed */
+          margin-left: 20px;
+          flex: auto /* Adjust the margin as needed */
+        }
+        .slide-content {
+          display: flex;
+          align-items: center;
+        }
+
+        .text-container {
+          flex: auto;
+          max-width: 50%;
+          max-height: 50%; 
+        }
+        
+        .slide-image {
+          max-width: 50%;
+          max-height: 50%;
+        }
+
 
         .slide-container {
             width: 600px;
@@ -126,18 +147,27 @@
     <div class="slide-container" onclick="nextSlide()">
 
       <div id="slide1" class="slide active">
-          <div class="slide-content">
+          
               <h1>Introducing Myself</h1>
 
-              <p>Play the music to enhance your experience and click on the slides to follow along with the music.</p>
+              <p><i>Play the music to enhance your experience and click on the slides to follow along with the music.</i></p>
               <p>Enjoy!</p>
-          </div>
+          
       </div>
 
       <div id="slide2" class="slide">
-          <h2>My Name</h2>
-          <p>Full name: Christianne Mikaela Ysabel F. San Jose</p>
-          <p>Nickname: Kimi</p>
+        <div class = "slide-content">
+          <div class = "text-container">
+            <h2>My Name</h2>
+            <p>Full name: Christianne Mikaela Ysabel F. San Jose</p>
+            <p>Nickname: Kimi</p>
+          </div>
+          
+          <div class="image-container">
+            <img src="firstpic.jpg" alt="Me" class="slide-image">
+        </div>
+        </div>
+          
       </div>
 
       <div id="slide3" class="slide">
@@ -157,7 +187,8 @@
 
       <div id="slide6" class="slide">
         <h2>My Sign</h2>
-        <p>Pisces</p>
+        <p>Pisces</p><br>
+        <img src="pisces.png" alt="Pisces" class="slide-image">
       </div>
 
       <div id="slide7" class="slide">
@@ -204,13 +235,20 @@
       </div>
 
       <div id="slide14" class="slide">
-        <h2>And my favorite animal</h2>
-        <p>Luna my love</p>
+        <div class = "slide-content">
+          <div class = "text-container">
+            <h2>And my favorite animal</h2>
+            <p>Luna my love (dog)</p>
+          </div>
+          <div class="image-container">
+            <img src="dog.jpg" alt="Luna" class="slide-image">
+        </div>
+        </div>
       </div>
 
       <div id="slide15" class="slide">
-        <p>There's much more to know</p>
-        <p>That will cover as we grow</p>
+        <p><i>There's much more to know</i></p>
+        <p><i>That will cover as we grow</i></p>
       </div>
 
       <div id="slide16" class="slide">
@@ -219,20 +257,20 @@
       </div>
 
       <div id="slide17" class="slide">
-        <p>And yes all these things are true</p>
-        <p>So tell me little something 'bout you</p>
+        <p><i>And yes all these things are true</i></p>
+        <p><i>So tell me little something 'bout you</i></p>
       </div>
 
       <div id="slide18" class="slide">
         <p>(Chorus)</p>
-        <p>While waiting, here's a fun fact! (Go next)</p>
+        <p>While waiting, here's a fun fact..</p>
       </div>
 
       <div id="slide19" class="slide">
-        <p>Fun fact!</p>
-        <p>My nickname, Kimi, came from Kimi Räikkönen, who's the most successful Finnish Formula One driver (according to Wikipedia)</p>
+        <p>Fun fact:</p>
+        <p>My nickname, Kimi, came from Kimi Räikkönen, who's the most successful Finnish Formula One driver (according to Wikipedia).</p>
         <br>
-        <p>Did the chorus end? Go next!</p>
+        <p>Did the chorus end? Let's proceed-</p>
       </div>
       
       <div id="slide20" class="slide">
@@ -296,8 +334,8 @@
       </div>
 
       <div id="slide31" class="slide">
-        <p>There's much more to know</p>
-        <p>That will cover as we grow</p>
+        <p><i>There's much more to know</i></p>
+        <p><i>That will cover as we grow</i></p>
       </div>
 
       <div id="slide32" class="slide">
@@ -311,8 +349,8 @@
       </div>
 
       <div id="slide33" class="slide">
-        <p>And yes all these things are true</p>
-        <p>So tell me little something 'bout you</p>
+        <p><i>And yes all these things are true</i></p>
+        <p><i>So tell me little something 'bout you</i></p>
       </div>
 
       <div id="slide34" class="slide">
