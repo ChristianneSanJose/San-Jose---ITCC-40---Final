@@ -1,72 +1,384 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Creative Page</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      
+        body {
+            background-image: url('background.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        .slide-container {
+            width: 600px;
+            height: 400px;
+            background-color: #554D74;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .slide-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .slide {
+            display: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-family: sans-serif;
+            position: relative;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        .slide:first-child {
+            position: relative;
+            overflow: hidden;
+            background-color: #554D74;
+            border-radius: 20px;
+        }
+        
+        .slide-content {
+            z-index: 1;
+        }
+
+        .music-container {
+            width: 300px;
+            height: 60px;
+            background-color: #554D74;
+            border-radius: 30px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .music-container button {
+            margin-right: 10px;
+        }
+
+        .music-container button img {
+            width: 20px; /* Adjust the width as desired */
+            height: 20px; /* Adjust the height as desired */
+        }
+
+        .music-container input[type="range"] {
+            flex-grow: 1;
+        }
+        
+        h1{
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        
+        li {
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+
+    </style>
 </head>
 <body>
-  <header>
-    <h1>About Me</h1>
-  </header>
+  <div class = container>
+    <div class="slide-container" onclick="nextSlide()">
 
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <p>Hi, I'm [Your Name]! Welcome to my creative page where I share my interests, achievements, and personal projects.</p>
-  </section>
+      <div id="slide1" class="slide active">
+          <div class="slide-content">
+              <h1>Introducing Myself</h1>
 
-  <section id="personal-info">
-    <h2>Personal Information</h2>
-    <p>Name: [Your Name]</p>
-    <p>Age: [Your Age]</p>
-    <p>Location: [Your Location]</p>
-  </section>
+              <p>Play the music to enhance your experience and click on the slides to follow along with the music.</p>
+              <p>Enjoy!</p>
+          </div>
+      </div>
 
-  <section id="interests">
-    <h2>Interests and Hobbies</h2>
-    <ul>
-      <li>Hobby 1</li>
-      <li>Hobby 2</li>
-      <li>Hobby 3</li>
-    </ul>
-  </section>
+      <div id="slide2" class="slide">
+          <h2>My Name</h2>
+          <p>Full name: Christianne Mikaela Ysabel F. San Jose</p>
+          <p>Nickname: Kimi</p>
+      </div>
 
-  <section id="education">
-    <h2>Education and Work Experience</h2>
-    <p>Education: [Your Education]</p>
-    <p>Work Experience: [Your Work Experience]</p>
-  </section>
+      <div id="slide3" class="slide">
+          <h2>My Age</h2>
+          <p>19</p>
+      </div>
 
-  <section id="achievements">
-    <h2>Achievements and Awards</h2>
-    <p>Achievement 1</p>
-    <p>Achievement 2</p>
-    <p>Achievement 3</p>
-  </section>
+      <div id="slide4" class="slide">
+        <h2>My Favorite Color</h2>
+        <p>Blue</p>
+      </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Skill 1</li>
-      <li>Skill 2</li>
-      <li>Skill 3</li>
-    </ul>
-  </section>
+      <div id="slide5" class="slide">
+        <h2>My Height</h2>
+        <p>5'5(?)</p>
+      </div>
 
-  <section id="projects">
-    <h2>Personal Projects</h2>
-    <p>Project 1: [Project Description]</p>
-    <p>Project 2: [Project Description]</p>
-    <p>Project 3: [Project Description]</p>
-  </section>
+      <div id="slide6" class="slide">
+        <h2>My Sign</h2>
+        <p>Pisces</p>
+      </div>
 
-  <section id="quotes">
-    <h2>Quotes and Inspirational Messages</h2>
-    <blockquote>"Quote 1"</blockquote>
-    <blockquote>"Quote 2"</blockquote>
-  </section>
+      <div id="slide7" class="slide">
+        <h2>Do I have a Lover?</h2>
+        <p>No :<</p>
+      </div>
 
-  <footer>
-    <p>&copy; 2023 [Your Name]. All rights reserved.</p>
-  </footer>
+      <div id="slide8" class="slide">
+        <h2>What's my nationality?</h2>
+        <p>Filipino</p>
+      </div>
+
+      <div id="slide9" class="slide">
+        <h2>Here are some things that inspire me</h2>
+        <ul> 
+          <li>Fictional men</li>
+          <li>Food</li>
+          <li>Money</li>
+      </ul>
+      </div>
+
+      <div id="slide10" class="slide">
+        <h2>My favorite food</h2>
+        <ul> 
+          <li>Ramen</li>
+          <li>Chicken</li>
+          <li>Carbonara</li>
+      </ul>
+      </div>
+
+      <div id="slide11" class="slide">
+        <h2>My current mood</h2>
+        <p>Super stressed sa hell week T^T</p>
+      </div>
+
+      <div id="slide12" class="slide">
+        <h2>And my shoe size</h2>
+        <p>8</p>
+      </div>
+
+      <div id="slide13" class="slide">
+        <h2>This is my favorite tv show</h2>
+        <p>Brooklyn Nine-Nine</p>
+      </div>
+
+      <div id="slide14" class="slide">
+        <h2>And my favorite animal</h2>
+        <p>Luna my love</p>
+      </div>
+
+      <div id="slide15" class="slide">
+        <p>There's much more to know</p>
+        <p>That will cover as we grow</p>
+      </div>
+
+      <div id="slide16" class="slide">
+        <h2>I got this many tattoos</h2>
+        <p>Walae ^0^</p>
+      </div>
+
+      <div id="slide17" class="slide">
+        <p>And yes all these things are true</p>
+        <p>So tell me little something 'bout you</p>
+      </div>
+
+      <div id="slide18" class="slide">
+        <p>(Chorus)</p>
+        <p>While waiting, here's a fun fact! (Go next)</p>
+      </div>
+
+      <div id="slide19" class="slide">
+        <p>Fun fact!</p>
+        <p>My nickname, Kimi, came from Kimi Räikkönen, who's the most successful Finnish Formula One driver (according to Wikipedia)</p>
+        <br>
+        <p>Did the chorus end? Go next!</p>
+      </div>
+      
+      <div id="slide20" class="slide">
+        <h2>My favorite song</h2>
+        <p>Good Parts by LE SSERAFIM</p>
+      </div>
+
+      <div id="slide21" class="slide">
+        <h2>And my favorite movie</h2>
+        <p>Avatar 2 (rn)</p>
+      </div>
+
+      <div id="slide22" class="slide">
+        <h2>My hair is thing long</h2>
+        <p>Pretty long hehe</p>
+      </div>
+
+      <div id="slide23" class="slide">
+        <h2>What I want to grow up to be</h2>
+        <p>...rich hehehe</p>
+      </div>
+
+      <div id="slide24" class="slide">
+        <h2>Here's a nicname I go by</h2>
+        <p>o- I just talked about it.. uhm sometimes my mom calls me Kimwah T^T</p>
+      </div>
+
+      <div id="slide25" class="slide">
+        <h2>And some things I never tried</h2>
+        <ul> 
+          <li>Riding a helicopter</li>
+          <li>Winning the lotto</li>
+          <li>Isekai-ing</li>
+        </ul>
+      </div>
+
+      <div id="slide26" class="slide">
+        <h2>Do I have a pet?</h2>
+        <p>YESS</p>
+      </div>
+
+      <div id="slide27" class="slide">
+        <h2>Have I named it yet?</h2>
+        <p>Fullname: Luna Luciana Hermione Fernandez San Jose</p>
+        <p>Nickname: Luna</p>
+      </div>
+
+      <div id="slide28" class="slide">
+        <h2>What shade are my eyes?</h2>
+        <p>Dark brown</p>
+      </div>
+
+      <div id="slide29" class="slide">
+        <h2>Here's my favorite cereal</h2>
+        <p>Can't go wrong with corn flakes</p>
+      </div>
+
+      <div id="slide30" class="slide">
+        <h2>And a place I'd like to go</h2>
+        <p>Japan</p>
+      </div>
+
+      <div id="slide31" class="slide">
+        <p>There's much more to know</p>
+        <p>That will cover as we grow</p>
+      </div>
+
+      <div id="slide32" class="slide">
+        <h2>Here some habits that I do</h2>
+        <ul> 
+          <li>Stress eat</li>
+          <li>Stress sleep</li>
+          <li>Stress play video games</li>
+          <li>Stress. huhu</li>
+        </ul>
+      </div>
+
+      <div id="slide33" class="slide">
+        <p>And yes all these things are true</p>
+        <p>So tell me little something 'bout you</p>
+      </div>
+
+      <div id="slide34" class="slide">
+        <p>(Chorus)</p>
+        <p>Anyway that's all for me! Thank you!</p>
+      </div>
+  
+  </div>
+
+
+  <div class = "music-container">
+    <audio id="backgroundMusic" src="song.mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <div = "music">
+      <button onclick="togglePlayback()"><img src="playpause.png" alt="Play/Pause"></i></button>
+      <input type="range" id="seekBar" min="0" step="0.1" value="0" oninput="seekAudio(event)">
+    </div>
+  </div>
+  </div>
+    
+
+    <script>
+        var currentSlide = 1;
+        var totalSlides = document.getElementsByClassName('slide').length;
+        var container = document.getElementsByClassName('container')[0];
+        var audio = document.getElementById('backgroundMusic');
+        var seekBar = document.getElementById('seekBar');
+
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide > totalSlides) {
+                currentSlide = 1;
+            }
+            updateSlides();
+        }
+        
+        function updateSlides() {
+            for (var i = 0; i < totalSlides; i++) {
+                var slide = document.getElementsByClassName('slide')[i];
+                if (i === currentSlide - 1) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            }
+        }
+
+        function togglePlayback() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function seekAudio(event) {
+            var seekTime = audio.duration * (event.target.value / 100);
+            audio.currentTime = seekTime;
+        }
+
+        audio.addEventListener('timeupdate', function() {
+            var progress = (audio.currentTime / audio.duration) * 100;
+            seekBar.value = progress;
+        });
+    </script>
 </body>
 </html>
